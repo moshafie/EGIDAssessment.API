@@ -9,9 +9,41 @@ namespace EGIDAssessment.Infrastructure.InitialDataInitializer
 {
     public class DataInitializer : IDataInitializer
     {
-        public List<Broker> getInitialBroker() { return new List<Broker>() {new Broker {ID=1,Name="Ahmed" }}; }
+        public List<Broker> getInitialBroker() 
+        {
+            return new List<Broker>() 
+        {
+            new Broker {ID=1,Name="Ahmed" },
+            new Broker {ID=2,Name="Mohamed" },
+            new Broker {ID=3,Name="JAk" },
+            new Broker {ID=4,Name="Moo" },
+            new Broker {ID=5,Name="Adel" },
 
-        public List<Person> getInitialPerson() { return new List<Person>() { new Person { Id = 1, Name = "Ahmed" ,BrokerId=1} }; }
+        }; 
+        }
+
+        public List<Person> getInitialPerson() 
+        { 
+            return new List<Person>() {
+            new Person { Id = 1, Name = "me" ,BrokerId=1},
+            new Person { Id = 2, Name = "loay" ,BrokerId=2},
+            new Person { Id = 3, Name = "maz" ,BrokerId=2},
+            new Person { Id = 4, Name = "tamara" ,BrokerId=3},
+            new Person { Id = 5, Name = "Ahmed" ,BrokerId=4},
+          }; 
+        }
+
+        public List<Order> getInitialOrder()
+        {
+            return new List<Order>() {
+            new Order { ID = 1, Commission = 0.6,Quantity="3",StockId=2,PersoneID=1 ,BrokerId=1,Price=10},
+            new Order { ID = 2, Commission = 0.9,Quantity="3",StockId=3,PersoneID=1 ,BrokerId=1,Price=15},
+            new Order { ID = 3, Commission = 1.2,Quantity="2",StockId=10,PersoneID=1 ,BrokerId=1,Price=30},
+            new Order { ID = 4, Commission = 8,Quantity="1",StockId=20,PersoneID=1 ,BrokerId=1,Price=20 },
+            new Order { ID = 5, Commission = 1,Quantity="5",StockId=27,PersoneID=1 ,BrokerId=1,Price=10}
+          };
+        }
+
 
 
         public List<Stock> GetInitialStoks()

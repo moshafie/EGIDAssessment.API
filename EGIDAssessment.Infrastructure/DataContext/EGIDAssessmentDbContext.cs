@@ -40,7 +40,7 @@ namespace EGIDAssessment.Infrastructure.DataContext
             modelBuilder.Entity<Stock>().HasData(_dataInitializer.GetInitialStoks());
             modelBuilder.Entity<Broker>().HasData(_dataInitializer.getInitialBroker());
             modelBuilder.Entity<Person>().HasData(_dataInitializer.getInitialPerson());
-
+            modelBuilder.Entity<Order>().HasData(_dataInitializer.getInitialOrder());
             #endregion
         }
     }

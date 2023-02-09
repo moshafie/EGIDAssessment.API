@@ -60,7 +60,7 @@ namespace EGIDAssessment.Infrastructure.Repository
         public async Task<double> CalcCommission(double price,double Quantity)
         {
             double totalPrice = price * Quantity;
-            double percentComplete = Math.Round((2 / totalPrice),2);
+            double percentComplete = Math.Round((totalPrice *0.02),2);
             return percentComplete;
 
         }
